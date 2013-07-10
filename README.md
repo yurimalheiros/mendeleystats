@@ -1,5 +1,5 @@
 Mendeley Stats
-##############
+==============
 
 A command line tool to extract information about papers in a Mendeley folder.
 
