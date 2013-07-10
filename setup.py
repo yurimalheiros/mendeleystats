@@ -6,8 +6,8 @@ except ImportError:
 packages = ['mendeleystats']
 requires = []
 
-setup(name='Mendeley Stats',
-      version='0.1',
+setup(name='mendeleystats',
+      version='0.1.2',
       description='A command line tool to extract information about papers in a Mendeley folder.',
       long_description=open('README.md').read(),
       author=u'Yuri Malheiros',
@@ -21,8 +21,8 @@ setup(name='Mendeley Stats',
       license=open('LICENSE').read(),
       zip_safe=False,
       install_requires = ['httplib2==0.8',
-                          'matplotlib==1.2.1',
                           'numpy==1.7.1',
+                          'matplotlib==1.2.1',
                           'oauth2==1.5.211',
                           'requests==1.2.3',
                           'wsgiref==0.1.2'],

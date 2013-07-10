@@ -8,6 +8,7 @@ A command line tool to extract information about papers in a Mendeley folder.
 ### OS X and Linux:
 
 ```
+pip install numpy
 pip install mendeleystats
 ```
 
