@@ -49,3 +49,7 @@ the options are: year, type, authors, keywords, and publishedin.
 
 Besides, you can choose to save a .csv file with the information instead get a chart.
 For this, you need to use the value csv in the argument --output.
+
+## Credits
+
+I'm using two modules from https://github.com/Mendeley/mendeley-oapi-example
