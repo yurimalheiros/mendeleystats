@@ -1,0 +1,7 @@
+*.pyc
+*.swp
+.DS_Store
+keys_api.mendeley.com.pkl
+build/
+dist/
+*.egg-info/

@@ -1,11 +1,8 @@
-import os
-import sys
 import csv
 import itertools
-import argparse
 from pylab import *
 import numpy.numarray as na
-from mendeley_client import *
+from mendeleystats.mendeley_client import *
 from collections import Counter
 
 class Folder(object):
@@ -173,37 +170,5 @@ class Folder(object):
             writer.writerows(counter.items())
 
 
-########## Main ##########
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Mendeley Stats")
-    parser.add_argument("--info", choices=["year", "type", "authors", "keywords", "publishedin"], help='paper information')
-    parser.add_argument("--output", choices=["chart", "csv"], help='data presentation type')
-    parser.add_argument("--folder", help='folder name')
-    args = parser.parse_args()
-
-    config_path = os.path.join(os.path.expanduser("~"), ".mendeleystatsconfig")
-    if not os.path.exists(config_path):
-        print "I can't run."
-        print "Please, create a .mendeleystatsconfig file with the API keys in your home directory."
-        sys.exit(0)
-
-
-    folder = Folder(config_path)
-    folder.load_data(args.folder)
-
-    actions = {
-        "year chart" : folder.plot_years,
-        "type chart" : folder.plot_types,
-        "authors chart" : folder.plot_authors,
-        "keywords chart" : folder.plot_keywords,
-        "publishedin chart" : folder.plot_published_in,
-        "year csv" : folder.csv_years,
-        "type csv" : folder.csv_types,
-        "authors csv" : folder.csv_authors,
-        "keywords csv" : folder.csv_keywords,
-        "publishedin csv" : folder.csv_published_in,
-    }
-
-    actions[args.info + " " + args.output]()
 
