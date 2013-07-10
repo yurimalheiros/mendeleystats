@@ -32,8 +32,8 @@ I do not know. I accept help to write this :)
 It is super simple to use:
 
 ```
-mendeleystats [-h] [--info {year,type,authors,keywords,publishedin}]
-                [--output {chart,csv}] [--folder FOLDER]
+mendeleystats [-h] --info {year,type,authors,keywords,publishedin}
+                --output {chart,csv} --folder FOLDER
 ```
 
 For example:
