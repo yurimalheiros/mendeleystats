@@ -1,4 +1,4 @@
-httplib2==0.8
+httplib2==0.18.0
 ipython==0.13.2
 matplotlib==1.2.1
 numpy==1.7.1
